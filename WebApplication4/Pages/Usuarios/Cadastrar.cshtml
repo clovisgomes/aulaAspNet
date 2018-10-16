@@ -70,6 +70,8 @@
 <script>
     function buscaEndereco() {
         let cep = document.querySelector("#Cep");
+        let value = = cep.value;
+        value = value.replace("-", "");
         $.getJSON("https://viacep.com.br/ws/" + cep.value + "/json/",
             function (resp) {
                 if (resp.erro) {
